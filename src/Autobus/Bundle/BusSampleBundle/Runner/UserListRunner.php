@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * class UserListRunner 
+ * class UserListRunner
  */
 class UserListRunner extends AbstractRunner implements ExportRunnerInterface
 {

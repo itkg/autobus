@@ -24,8 +24,13 @@ class RunnerHandleExceptionEvent extends RunnerHandleEvent
      * @param Execution       $execution
      * @param \Exception      $exception
      */
-    public function __construct(RunnerInterface $runner, Context $context, Job $job, Execution $execution, \Exception $exception)
-    {
+    public function __construct(
+        RunnerInterface $runner,
+        Context $context,
+        Job $job,
+        Execution $execution,
+        \Exception $exception
+    ) {
         parent::__construct($runner, $context, $job, $execution);
 
         $this->exception = $exception;

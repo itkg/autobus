@@ -26,7 +26,11 @@ class JobType extends AbstractType
         $builder
           ->add('name')
           ->add('runner', ChoiceType::class, ['choices' => array_flip($runnerClasses)])
-          ->add('group', EntityType::class, ['placeholder' => 'Choose ...', 'required' => false, 'class' => JobGroup::class])
+          ->add(
+              'group',
+              EntityType::class,
+              ['placeholder' => 'Choose ...', 'required' => false, 'class' => JobGroup::class]
+          )
           ->add('trace')
           ->add('config');
     }

@@ -18,7 +18,11 @@ class WebJobType extends JobType
         $builder
           ->add('path')
           ->add('secure')
-          ->add('methods', ChoiceType::class, ['multiple' => true, 'choices' => ['GET' => 'GET', 'POST' => 'POST'], 'expanded' => true]);
+          ->add(
+              'methods',
+              ChoiceType::class,
+              ['multiple' => true, 'choices' => ['GET' => 'GET', 'POST' => 'POST'], 'expanded' => true]
+          );
     }
 
     /**
@@ -29,9 +33,9 @@ class WebJobType extends JobType
         parent::configureOptions($resolver);
 
         $resolver->setDefaults(
-          array(
+            array(
             'data_class' => 'Autobus\Bundle\BusBundle\Entity\WebJob',
-          )
+            )
         );
     }
 }

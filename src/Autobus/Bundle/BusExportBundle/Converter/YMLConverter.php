@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class YMLConverter 
+ * class YMLConverter
  */
 class YMLConverter extends SerializeConverter
 {

@@ -76,4 +76,3 @@ class JobGroup
         return $this->name;
     }
 }
-

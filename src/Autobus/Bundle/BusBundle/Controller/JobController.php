@@ -46,7 +46,11 @@ class JobController extends Controller
 
         $job = $this->get('bus.job.factory')->create($type);
         $formType = $this->get('bus.form.job.factory')->create($job);
-        $form = $this->createForm(get_class($formType), $job, ['runner_chain' => $this->get('Autobus\Bundle\BusBundle\Runner\RunnerChain')]);
+        $form = $this->createForm(
+            get_class($formType),
+            $job,
+            ['runner_chain' => $this->get('Autobus\Bundle\BusBundle\Runner\RunnerChain')]
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -85,7 +89,11 @@ class JobController extends Controller
     {
         $deleteForm = $this->createDeleteForm($job);
         $formType = $this->get('bus.form.job.factory')->create($job);
-        $editForm = $this->createForm(get_class($formType), $job, ['runner_chain' => $this->get('Autobus\Bundle\BusBundle\Runner\RunnerChain')]);
+        $editForm = $this->createForm(
+            get_class($formType),
+            $job,
+            ['runner_chain' => $this->get('Autobus\Bundle\BusBundle\Runner\RunnerChain')]
+        );
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

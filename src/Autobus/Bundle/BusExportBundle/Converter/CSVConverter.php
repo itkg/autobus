@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class CSVConverter 
+ * class CSVConverter
  */
 class CSVConverter implements ConverterInterface
 {

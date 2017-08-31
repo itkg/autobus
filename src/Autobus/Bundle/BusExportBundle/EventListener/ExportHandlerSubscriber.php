@@ -9,7 +9,7 @@ use Autobus\Bundle\BusExportBundle\Runner\ExportRunnerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * class ExportHandlerSubscriber 
+ * class ExportHandlerSubscriber
  */
 class ExportHandlerSubscriber implements EventSubscriberInterface
 {
@@ -68,7 +68,5 @@ class ExportHandlerSubscriber implements EventSubscriberInterface
 
         $response->setContent($convertedData);
         $response->headers->set('Content-Type', $runner->getFormat());
-
-
     }
 }

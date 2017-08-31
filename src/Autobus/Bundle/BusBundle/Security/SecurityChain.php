@@ -9,7 +9,7 @@ use Autobus\Bundle\BusBundle\Security\Strategy\Exception\UnknownSecurityStrategy
 /**
  * Class SecurityChain
  */
-class SecurityChain 
+class SecurityChain
 {
     /**
      * @var array
@@ -31,15 +31,18 @@ class SecurityChain
     public function check(Request $request, array $modes)
     {
         foreach ($modes as $strategyConfig) {
-            if (!isset($this->securityStrategies[$strategyConfig['mode']])){
-                throw new UnknownSecurityStrategyException(sprintf('security strategy %s does not exist', $strategyConfig['mode']));
+            if (!isset($this->securityStrategies[$strategyConfig['mode']])) {
+                throw new UnknownSecurityStrategyException(
+                    sprintf(
+                        'security strategy %s does not exist',
+                        $strategyConfig['mode']
+                    )
+                );
             }
 
             /** @var SecurityStrategyInterface $strategy */
             $strategy = $this->securityStrategies[$strategyConfig['mode']];
             $strategy->check($request, !empty($strategyConfig['config']) ? $strategyConfig['config'] : []);
-
         }
     }
-
 }
