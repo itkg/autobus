@@ -5,6 +5,8 @@ parameters:
         failed: ~
         succeeded: ~
     tasks:
+        composer:
+            no_check_publish: true
         phpcs:
             standard: PSR2
             whitelist_patterns:
