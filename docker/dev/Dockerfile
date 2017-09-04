@@ -5,8 +5,10 @@ FROM php:7.0-fpm
 # Install git (required by Composer)
 # Install zip (required by Composer)
 RUN apt-get update && apt-get install -qy \
+        cron \
         libicu-dev \
         git \
+        vim \
         zip \
     && rm -rf /var/lib/apt/lists/* \
 
