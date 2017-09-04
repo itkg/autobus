@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class ConverterInterface 
+ * class ConverterInterface
  */
 interface ConverterInterface
 {

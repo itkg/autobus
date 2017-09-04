@@ -58,7 +58,13 @@ class StartExecutionSubscriber implements EventSubscriberInterface
         if ($job instanceof WebJob) {
             $allowedMethods = $job->getMethods(); // ?
             if (!empty($allowedMethods) && !in_array($request->getMethod(), $allowedMethods)) {
-                throw new BadRequestHttpException(sprintf('Method [%s] not allowed (allowed methods: %s]', $request->getMethod(), implode(', ', $allowedMethods)));
+                throw new BadRequestHttpException(
+                    sprintf(
+                        'Method [%s] not allowed (allowed methods: %s]',
+                        $request->getMethod(),
+                        implode(', ', $allowedMethods)
+                    )
+                );
             }
         }
     }

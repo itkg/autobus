@@ -54,8 +54,7 @@ abstract class AbstractRunner implements RunnerInterface
             $this->process($context, $job, $execution);
             $execution->setState($execution::STATE_SUCCESS);
             $this->eventDispatcher->dispatch(RunnerEvents::SUCCESS, $event);
-
-        } catch(\Exception $exception) {
+        } catch (\Exception $exception) {
             $this->eventDispatcher->dispatch(
                 RunnerEvents::ERROR,
                 new RunnerHandleExceptionEvent(

@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class XMLConverter 
+ * class XMLConverter
  */
 class XMLConverter extends SerializeConverter
 {

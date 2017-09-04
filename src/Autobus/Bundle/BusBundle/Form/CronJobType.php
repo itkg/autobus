@@ -27,9 +27,9 @@ class CronJobType extends JobType
         parent::configureOptions($resolver);
 
         $resolver->setDefaults(
-          array(
+            array(
             'data_class' => 'Autobus\Bundle\BusBundle\Entity\CronJob',
-          )
+            )
         );
     }
 }

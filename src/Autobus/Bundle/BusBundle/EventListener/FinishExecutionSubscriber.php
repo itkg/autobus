@@ -70,7 +70,7 @@ class FinishExecutionSubscriber implements EventSubscriberInterface
 
             if ($job->getTrace()) {
                 $logs = $this->logger->getLogs();
-                $logs = array_map(function($log) {
+                $logs = array_map(function ($log) {
                     return sprintf('%s [%s] %s', $log['timestamp'], $log['priorityName'], $log['message']);
                 }, $logs);
                 $execution->setLogs(implode("\n", $logs));

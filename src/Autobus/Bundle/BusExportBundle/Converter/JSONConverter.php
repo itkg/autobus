@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class JSONConverter 
+ * class JSONConverter
  */
 class JSONConverter extends SerializeConverter
 {

@@ -20,10 +20,10 @@ class ExecutionController extends Controller
     public function showAction(Execution $execution)
     {
         return $this->render(
-          'AutobusBusBundle::execution/show.html.twig',
-          array(
+            'AutobusBusBundle::execution/show.html.twig',
+            array(
             'execution' => $execution,
-          )
+            )
         );
     }
 }

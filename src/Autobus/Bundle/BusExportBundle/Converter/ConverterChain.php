@@ -3,7 +3,7 @@
 namespace Autobus\Bundle\BusExportBundle\Converter;
 
 /**
- * class ConverterChain 
+ * class ConverterChain
  */
 final class ConverterChain
 {
@@ -31,9 +31,7 @@ final class ConverterChain
     {
 
         foreach ($this->converters as $converter) {
-
             if ($converter->supports($format)) {
-
                 return $converter->convert($data, $config);
             }
         }

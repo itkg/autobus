@@ -24,6 +24,5 @@ class WebJobRepository extends \Doctrine\ORM\EntityRepository
             ->setParameter('prefix', '%'.$prefix.'%');
 
         return $qb->getQuery()->execute();
-
     }
 }
