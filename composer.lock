@@ -4,8 +4,130 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "64bc4c650f8b429ac0a45f0e1ef2071b",
+    "content-hash": "2b4124d1488c1ceaccb58d0cc8698b5b",
     "packages": [
+        {
+            "name": "autobus-php/autobus-bus-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/autobus-php/AutobusBusBundle.git",
+                "reference": "f0af88afc00a7dbf98d99be0e5c93413600c6fb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/autobus-php/AutobusBusBundle/zipball/f0af88afc00a7dbf98d99be0e5c93413600c6fb2",
+                "reference": "f0af88afc00a7dbf98d99be0e5c93413600c6fb2",
+                "shasum": ""
+            },
+            "require": {
+                "autobus-php/autobus-bus-export-bundle": "dev-master",
+                "autobus-php/autobus-bus-sample-bundle": "dev-master",
+                "php": ">=7.0.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Autobus\\Bundle\\BusBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal DENIS",
+                    "email": "pascal.denis@businessdecision.com"
+                },
+                {
+                    "name": "Michael BOUVY",
+                    "email": "michael.bouvy@clickandmortar.fr"
+                }
+            ],
+            "description": "AutobusBusBundle",
+            "time": "2017-09-12T12:27:27+00:00"
+        },
+        {
+            "name": "autobus-php/autobus-bus-export-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/autobus-php/AutobusBusExportBundle.git",
+                "reference": "cd6d68fd355f41673c4c9c38f0235dc5d676b122"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/autobus-php/AutobusBusExportBundle/zipball/cd6d68fd355f41673c4c9c38f0235dc5d676b122",
+                "reference": "cd6d68fd355f41673c4c9c38f0235dc5d676b122",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Autobus\\Bundle\\BusExportBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal DENIS",
+                    "email": "pascal.denis@businessdecision.com"
+                },
+                {
+                    "name": "Michael BOUVY",
+                    "email": "michael.bouvy@clickandmortar.fr"
+                }
+            ],
+            "description": "AutobusBusExportBundle",
+            "time": "2017-09-12T12:06:21+00:00"
+        },
+        {
+            "name": "autobus-php/autobus-bus-sample-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/autobus-php/AutobusBusSampleBundle.git",
+                "reference": "e43b3f9af278811d04d9f5b6b4faea918a675f3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/autobus-php/AutobusBusSampleBundle/zipball/e43b3f9af278811d04d9f5b6b4faea918a675f3a",
+                "reference": "e43b3f9af278811d04d9f5b6b4faea918a675f3a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Autobus\\Bundle\\BusSampleBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal DENIS",
+                    "email": "pascal.denis@businessdecision.com"
+                },
+                {
+                    "name": "Michael BOUVY",
+                    "email": "michael.bouvy@clickandmortar.fr"
+                }
+            ],
+            "description": "AutobusBusSampleBundle",
+            "time": "2017-09-12T12:13:14+00:00"
+        },
         {
             "name": "composer/ca-bundle",
             "version": "1.0.7",
@@ -5100,8 +5222,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "autobus-php/autobus-bus-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
