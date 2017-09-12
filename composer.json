@@ -14,8 +14,6 @@
     ],
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle",
-            "Autobus\\": "src/Autobus",
             "": "src"
         },
         "classmap": [
@@ -31,8 +29,10 @@
             "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
         ]
     },
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
+        "autobus-php/autobus-bus-bundle": "dev-master",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-fixtures-bundle": "^2.3",
         "doctrine/orm": "^2.5",
