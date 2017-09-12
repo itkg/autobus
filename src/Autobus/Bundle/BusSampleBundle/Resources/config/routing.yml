@@ -1,3 +1,0 @@
-autobus_bus_sample_homepage:
-    path:     /
-    defaults: { _controller: AutobusBusSampleBundle:Default:index }

@@ -1,6 +1,0 @@
-services:
-  bus_export.subscriber.export_handler:
-    class: Autobus\Bundle\BusExportBundle\EventListener\ExportHandlerSubscriber
-    arguments:
-        - '@Autobus\Bundle\BusExportBundle\Converter\ConverterChain'
-    tags: ['kernel.event_subscriber']
