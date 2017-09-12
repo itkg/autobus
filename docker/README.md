@@ -36,7 +36,7 @@ $ composer install
 
 ### Allow to access the website from outside the container
 
-The following command will associates the local IP address with the hostname.
+The following command will associate the local IP address with the hostname.
 ```bash
 # This command must be run from outside the container
 $ echo '127.0.0.1 autobus.localhost www.autobus.localhost' | sudo tee --append /etc/hosts
