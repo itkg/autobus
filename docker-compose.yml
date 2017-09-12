@@ -21,4 +21,5 @@ services:
   database:
     image: mysql:5.7
     environment:
+      MYSQL_DATABASE: autobus
       MYSQL_ROOT_PASSWORD: root
