@@ -3,15 +3,17 @@
 ## Install
 
 ```
-composer install
-php bin/console d:s:u --force
-php bin/console doctrine:fixtures:load
-```
+composer create-project autobus-php/autobus --stability dev
 
-## Run (dev)
+# If needed, you may customize Docker Compose config
+cp docker-compose.override.yml.dist docker-compose.override.yml
 
-```
-php bin/console server:run
+docker-compose up
+
+docker-compose exec php bin/console d:s:u --force
+
+# Load sample data
+docker-compose exec php bin/console doctrine:fixtures:load
 ```
 
 ## Running async jobs
@@ -39,3 +41,4 @@ To create a new job:
 ## Requirements
 
 * PHP 7+
+
