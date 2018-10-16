@@ -1,5 +1,7 @@
 # Autobus - PHP service BUS
 
+![Autobus Logo](https://raw.githubusercontent.com/autobus-php/autobus/master/autobus-logo.png)
+
 ## Install
 
 ```
