@@ -11,19 +11,15 @@ RUN apt-get update && apt-get install -qy \
         vim \
         zip \
     && rm -rf /var/lib/apt/lists/* \
-
     # Install intl, pdo, pdo_mysql extension
     && docker-php-ext-install \
         intl \
         pdo \
         pdo_mysql \
-
     # Install composer
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-
     # Set TimeZone
     && cp /usr/share/zoneinfo/Europe/Paris /etc/localtime && echo "Europe/Paris" > /etc/timezone \
-
     # Add group user And add new user to group user
     && groupadd --gid 1000 user \
     && useradd --uid 1000 --gid user --shell /bin/bash --create-home user
